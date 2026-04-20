@@ -1,0 +1,19 @@
+{
+  "settings_schema": {
+    "logo": {
+      "name": "Logo",
+      "settings": {
+        "logo_image": {
+          "label": "Logo"
+        },
+        "logo_width": {
+          "label": "Width"
+        },
+        "favicon": {
+          "label": "Favicon",
+          "info": "Displayed at 32 x 32px"
+        }
+      }
+    }
+  }
+}

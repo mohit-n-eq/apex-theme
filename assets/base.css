@@ -598,18 +598,6 @@ video {
   margin-right: auto;
 }
 
-.mb-5 {
-  margin-bottom: 1.25rem;
-}
-
-.mb-8 {
-  margin-bottom: 2rem;
-}
-
-.mt-5 {
-  margin-top: 1.25rem;
-}
-
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
@@ -618,8 +606,4 @@ video {
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
-}
-
-.font-bold {
-  font-weight: 700;
 }

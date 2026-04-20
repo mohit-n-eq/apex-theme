@@ -33,8 +33,8 @@ If the **Linting** step fails, it means there is unused code, a forgotten `conso
 
 ### 2. Formatting (Prettier)
 We keep code style consistent to avoid "noisy" diffs in PRs.
-- **Check**: `npx prettier --check .`
-- **Fix**: `npx prettier --write .` (Run this before every commit!)
+- **Check**: `npm run format:check .`
+- **Fix**: `npm run format .` (Run this before every commit!)
 
 ### 3. Shopify Liquid (Theme Check)
 If **Theme Check** fails, you likely have a broken Liquid tag, a missing snippet, or are using a deprecated Shopify object.
