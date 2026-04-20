@@ -1,0 +1,23 @@
+name: Theme Check
+
+on:
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  theme-check:
+    name: Shopify Theme Validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Shopify Theme Check
+        # Using npx allows us to run the CLI directly without adding it to your package.json dependencies
+        run: npx @shopify/theme-check-node .

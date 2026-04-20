@@ -23,7 +23,8 @@
     "format": "prettier --write '**/*.{liquid,json,js,css}'",
     "format:check": "prettier --check '**/*.{liquid,json,js,css}'",
     "tailwind:dev": "npx tailwindcss -i ./assets/tailwind.css -o ./assets/base.css --watch",
-    "tailwind:build": "npx tailwindcss -i ./assets/tailwind.css -o ./assets/base.css --minify"
+    "tailwind:build": "npx tailwindcss -i ./assets/tailwind.css -o ./assets/base.css --minify",
+    "theme:check": "npx @shopify/theme-check-node ."
   },
   "repository": {
     "type": "git",

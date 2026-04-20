@@ -1,0 +1,6 @@
+extends: theme-default
+
+ignore:
+  - node_modules/**
+  - assets/base.css
+  - assets/tailwind.css
