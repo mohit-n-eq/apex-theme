@@ -1,8 +1,13 @@
 {
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@shopify/prettier-plugin-liquid": "^1.10.2",
     "@shopify/theme-check-node": "^3.25.1",
     "autoprefixer": "^10.5.0",
+    "eslint": "^10.2.1",
+    "eslint-plugin-html": "^8.1.4",
+    "eslint-plugin-tailwindcss": "^3.18.3",
+    "globals": "^17.5.0",
     "postcss": "^8.5.9",
     "prettier": "^3.8.3",
     "prettier-plugin-tailwindcss": "^0.7.2",
@@ -25,7 +30,9 @@
     "format:check": "prettier --check '**/*.{liquid,json,js,css}'",
     "tailwind:dev": "npx tailwindcss -i ./assets/tailwind.css -o ./assets/base.css --watch",
     "tailwind:build": "npx tailwindcss -i ./assets/tailwind.css -o ./assets/base.css --minify",
-    "theme:check": "theme-check-node ."
+    "theme:check": "theme-check-node .",
+    "lint": "eslint '**/*.js'",
+    "lint:fix": "eslint '**/*.js' --fix"
   },
   "repository": {
     "type": "git",
