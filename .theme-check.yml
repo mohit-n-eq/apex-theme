@@ -1,0 +1,18 @@
+ignore:
+  - node_modules/**
+  - assets/base.css
+  - assets/tailwind.css
+  - .github/**
+  - .vscode/**
+  - .prettier*
+  - .stylelintrc*
+  - .editorconfig
+  - .gitignore
+  - .theme-check.yml
+  - package.json
+  - package-lock.json
+  - README.md
+  - LICENSE
+  - .github/workflows/**
+  - templates/gift_card.liquid
+  

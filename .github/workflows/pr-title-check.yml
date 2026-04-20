@@ -1,0 +1,37 @@
+name: PR Title Check
+
+# Notice we added 'edited' here. If a developer messes up the title,
+# they can just edit the PR title in GitHub and the check will re-run.
+on:
+  pull_request:
+    types:
+      - opened
+      - edited
+      - synchronize
+
+jobs:
+  validate:
+    name: Validate PR Title
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check PR Title against Conventional Commits
+        uses: amannn/action-semantic-pull-request@v5
+        env:
+          # This token is automatically provided by GitHub Actions
+          # It allows the action to read the PR title
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          # Optional: You can specify exactly which types you want to allow
+          # If you leave this out, it defaults to standard conventional commits
+          types: |
+            feat
+            fix
+            docs
+            style
+            refactor
+            perf
+            test
+            build
+            ci
+            chore
+            revert

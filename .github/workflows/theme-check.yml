@@ -1,0 +1,19 @@
+name: Theme Check
+
+on:
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  theme-check:
+    name: Shopify Theme Validation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Shopify Theme Check
+        # This official action handles the CLI and dependencies for you
+        uses: shopify/theme-check-action@v2
+        with:
+          theme_root: '.'
