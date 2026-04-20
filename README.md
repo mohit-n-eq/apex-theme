@@ -2,6 +2,18 @@
 
 Welcome to the Apex Theme repository. To maintain high code quality and site performance, this project uses an automated CI/CD pipeline. Every Pull Request (PR) is automatically scanned for errors before it can be merged into `main`.
 
+## 💻 Local Development
+To start developing and have Tailwind CSS watch for changes:
+
+1. Install Dependencies:
+npm install
+
+2. Start Tailwind Watcher:
+npm run dev
+
+3. Start Shopify Preview:
+shopify theme dev (in a separate terminal)
+
 ## 🚀 The Pipeline Waterfall
 Our pipeline runs in a specific order. If one step fails, the subsequent steps will not run.
 
