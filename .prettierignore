@@ -1,0 +1,22 @@
+# Node dependencies
+node_modules/
+package-lock.json
+
+# Tailwind Compiled Output
+# Since Tailwind generates and minifies this, Prettier shouldn't touch it
+assets/base.css
+
+# Vendor & Minified Assets
+# Ignore third-party scripts and styles so Prettier doesn't break them
+*.min.js
+*.min.css
+assets/vendor*.js
+assets/vendor*.css
+
+# OS & Environment Files
+.DS_Store
+.env
+.shopify-cli.yml
+
+# Git & Workflows
+.git/
