@@ -1,6 +1,15 @@
 # Apex Theme Development Pipeline
 
-Welcome to the Apex Theme repository. To maintain high code quality and site performance, this project uses an automated CI/CD pipeline. Every Pull Request (PR) is automatically scanned for errors before it can be merged into `main`.
+Welcome to the Apex Theme repository. To maintain high code quality and site performance, this project uses an automated CI/CD pipeline. Every Pull Request (PR) is automatically scanned for errors before it can be merged.
+
+Deployment Workflow:
+To ensure stability, we follow a strict multi-tier deployment process:
+
+1. Development (dev): All new features, updates, and bug fixes should be branched off of and merged back into the dev branch.
+
+2. Staging (staging): Once features are ready for testing, a PR is opened from dev to staging. This environment mirrors production and is used for final QA and review.
+
+3. Production (main): After the code passes all checks and is approved in staging, a final PR is opened from staging to main for the live release.
 
 ## 💻 Local Development
 To start developing and have Tailwind CSS watch for changes:
@@ -9,7 +18,7 @@ To start developing and have Tailwind CSS watch for changes:
 npm install
 
 2. Start Tailwind Watcher:
-npm run dev
+npm run tailwind:dev
 
 3. Start Shopify Preview:
 shopify theme dev (in a separate terminal)

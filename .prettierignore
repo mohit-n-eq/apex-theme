@@ -12,6 +12,7 @@ assets/base.css
 *.min.css
 assets/vendor*.js
 assets/vendor*.css
+layout/password.liquid
 
 # OS & Environment Files
 .DS_Store
