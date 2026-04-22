@@ -15,8 +15,9 @@
         "logo_image": {
           "label": "Logo"
         },
-        "logo_width": {
-          "label": "Width"
+        "logo_height": {
+          "label_mb": "Mobile Height",
+          "label_desk": "Desktop Height"
         },
         "favicon": {
           "label": "Favicon",

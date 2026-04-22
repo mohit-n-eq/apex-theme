@@ -9,10 +9,17 @@
 
     {% render 'stylesheets' %}
     {% render 'scripts' %}
+    {% render 'theme-styles-variables' %}
   </head>
   <body>
     {% sections 'header-group' %}
-    {{ content_for_layout }}
+    <main
+      id='MainContent'
+      class='content-for-layout'
+      role='main'
+    >
+      {{ content_for_layout }}
+    </main>
     {% sections 'footer-group' %}
   </body>
 </html>

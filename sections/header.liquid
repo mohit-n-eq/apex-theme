@@ -1,10 +1,108 @@
-<h4>Header</h4>
+<div class='header__wrapper my-3{% if section.settings.header_width == "full" %} mx-3{% else %} container mx-auto{% endif %}'>
+  <div class='flex items-center justify-between'>
+    <div
+      class='header__logo'
+      style='--header-logo-height-mobile:{{ settings.logo_height_mb }}px;--header-logo-height-desktop:{{ settings.logo_height_desk }}px'
+    >
+      {% if settings.logo != blank %}
+        <a href='{{ shop.url }}'>
+          <img
+            src='{{ settings.logo | image_url }}'
+            alt='{{ settings.logo.alt | default: shop.name }}'
+            class='header__logo'
+            height='auto'
+            width='auto'
+          >
+        </a>
+      {% else %}
+        <h1 class='header__title'>{{ shop.name }}</h1>
+      {% endif %}
+    </div>
+    <div class='header__nav'>
+      <nav class='navigation__bar'>
+        <ul class='flex gap-3'>
+          {% for link in section.settings.menu.links %}
+            <li>
+              <a href='{{ link.url }}'>{{ link.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+    <div class='header__feature_icons flex gap-3'>
+      {% if section.settings.show_search %}
+        {% render 'icons',
+          icons: 'icon-search',
+          icon_classes: 'cursor-pointer',
+          icon_height: '22px',
+          icon_width: '22px',
+          icon_color: '#ffffff'
+        %}
+      {% endif %}
+      <a href='{{ routes.account_profile_url }}'>
+        {% render 'icons',
+          icons: 'icon-account',
+          icon_classes: 'cursor-pointer',
+          icon_height: '22px',
+          icon_width: '22px',
+          icon_color: '#ffffff'
+        %}
+      </a>
+      {% render 'icons',
+        icons: 'icon-cart',
+        icon_classes: 'cursor-pointer',
+        icon_height: '22px',
+        icon_width: '22px',
+        icon_color: '#ffffff'
+      %}
+    </div>
+  </div>
+</div>
 
 {% schema %}
 {
   "name": "Header",
   "tag": "header",
-  "settings": [],
+  "class": "section-header",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Menu Bar"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Menu"
+    },
+    {
+      "type": "header",
+      "content": "Search Bar"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_search",
+      "label": "Show Search"
+    },
+    {
+      "type": "header",
+      "content": "Appearance"
+    },
+    {
+      "type": "select",
+      "id": "header_width",
+      "label": "Width",
+      "options": [
+        {
+          "label": "Page",
+          "value": "container"
+        },
+        {
+          "label": "Full",
+          "value": "full"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
       "name": "Header",
