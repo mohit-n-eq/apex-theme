@@ -1,0 +1,2 @@
+/* global tippy */
+tippy('.tooltip');

@@ -42,27 +42,30 @@
       {% if section.settings.show_search %}
         {% render 'icons',
           icons: 'icon-search',
-          icon_classes: 'cursor-pointer',
+          icon_classes: 'cursor-pointer tooltip',
           icon_height: '22px',
           icon_width: '22px',
-          icon_color: '#ffffff'
+          icon_color: '#ffffff',
+          icon_attributes: 'data-tippy-content="Search the store" data-tippy-placement="bottom"'
         %}
       {% endif %}
       <a href='{{ routes.account_profile_url }}'>
         {% render 'icons',
           icons: 'icon-account',
-          icon_classes: 'cursor-pointer',
+          icon_classes: 'cursor-pointer tooltip',
           icon_height: '22px',
           icon_width: '22px',
-          icon_color: '#ffffff'
+          icon_color: '#ffffff',
+          icon_attributes: 'data-tippy-content="View your account" data-tippy-placement="bottom"'
         %}
       </a>
       {% render 'icons',
         icons: 'icon-cart',
-        icon_classes: 'cursor-pointer',
+        icon_classes: 'cursor-pointer tooltip',
         icon_height: '22px',
         icon_width: '22px',
-        icon_color: '#ffffff'
+        icon_color: '#ffffff',
+        icon_attributes: 'data-tippy-content="View your cart" data-tippy-placement="bottom"'
       %}
     </div>
   </div>
